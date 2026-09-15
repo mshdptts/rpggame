@@ -273,6 +273,7 @@ java -cp src Main
 * Multiple save slots
 * Story system
 * More advanced combat
+* add responsive gui
 
 ## Goal
 
