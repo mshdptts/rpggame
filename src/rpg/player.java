@@ -5,8 +5,8 @@ import java.util.ArrayList;
 
 public class player {
     String name;
-    static int maxhealth = 1000;
-    int health = maxhealth;
+    int maxhealth;
+    int health;
     int level = 1;
     int exp;
     int attack;
@@ -14,6 +14,7 @@ public class player {
 
     public player(String name, int health, int level, int exp, int attack, ArrayList<String> inventory) {
         this.name = name;
+        this.maxhealth = health;
         this.health = health;
         this.level = level;
         this.exp = exp;
@@ -46,6 +47,11 @@ public class player {
         if (health <= 0) {
             System.out.println(name + " has been defeated!");
         }
+    }
+
+    public void heal(int amount) {
+        health = Math.min(health + amount, maxhealth);
+        System.out.println(name + " healed " + amount + " HP! Health is now " + health + "/" + maxhealth);
     }
 
     public void attackTarget(player target) {

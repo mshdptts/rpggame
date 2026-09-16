@@ -1,0 +1,52 @@
+[
+  {
+    "id": "goblin",
+    "name": "Goblin",
+    "health": 150,
+    "attack": 20,
+    "race": "Goblin",
+    "expReward": 30,
+    "fleeChance": 0.3,
+    "canHeal": false
+  },
+  {
+    "id": "ogre",
+    "name": "Ogre",
+    "health": 400,
+    "attack": 45,
+    "race": "Ogre",
+    "expReward": 100,
+    "fleeChance": 0.0,
+    "canHeal": false
+  },
+  {
+    "id": "imp",
+    "name": "Imp",
+    "health": 100,
+    "attack": 15,
+    "race": "Imp",
+    "expReward": 20,
+    "fleeChance": 0.6,
+    "canHeal": false
+  },
+  {
+    "id": "mage",
+    "name": "Mage",
+    "health": 100,
+    "attack": 50,
+    "race": "human",
+    "expReward": 75,
+    "fleeChance": 0.2,
+    "canHeal": true
+  },
+  {
+    "id": "cursedCorpse",
+    "name": "Cursed Corpse",
+    "health": 75,
+    "attack": 95,
+    "race": "Cursed Corpse",
+    "expReward": 50,
+    "fleeChance": 0.0,
+    "canHeal": false
+  }
+]

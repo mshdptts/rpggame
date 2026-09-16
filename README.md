@@ -4,24 +4,25 @@ A simple terminal based RPG game made with Java
 
 ## Features
 
-* Player system
-* Enemy system
-* Item system
-* Turn based combat
-* Player leveling
-* Experience and gold
-* Inventory
-* JSON game data
-* Save and load system
-* Multiple enemies
-* Multiple items
-* Main game loop
+- Player system
+- Enemy system
+- Item system
+- Turn based combat
+- Player leveling
+- Experience and gold
+- Inventory
+- JSON game data
+- Save and load system
+- Multiple enemies
+- Multiple items
+- Main game loop
+- Manual JSON save and load
 
 ## Technologies
 
-* Java
-* JSON
-* Object Oriented Programming
+- Java
+- JSON
+- Object Oriented Programming
 
 ## Project Structure
 
@@ -140,6 +141,14 @@ Saving the game
 Loading the game
 Loading enemy data
 Loading item data
+
+### JSON data files
+
+`data/player.json` stores the player data. `data/enemies.json` stores the enemy
+presets. The combat test loads both files, then writes the updated player to
+`data/player-save.json` when the battle ends.
+
+The JSON is parsed manually, so no external JSON library is required.
 ```
 
 ## JSON Files
@@ -152,12 +161,12 @@ Example
 
 ```json
 {
-    "slime": {
-        "name": "Slime",
-        "hp": 30,
-        "attack": 5,
-        "defense": 2
-    }
+  "slime": {
+    "name": "Slime",
+    "hp": 30,
+    "attack": 5,
+    "defense": 2
+  }
 }
 ```
 
@@ -169,11 +178,11 @@ Example
 
 ```json
 {
-    "potion": {
-        "name": "Health Potion",
-        "type": "healing",
-        "value": 30
-    }
+  "potion": {
+    "name": "Health Potion",
+    "type": "healing",
+    "value": 30
+  }
 }
 ```
 
@@ -185,15 +194,15 @@ Example
 
 ```json
 {
-    "name": "Hero",
-    "level": 1,
-    "hp": 100,
-    "maxHp": 100,
-    "attack": 10,
-    "defense": 5,
-    "gold": 0,
-    "inventory": [],
-    "location": "village"
+  "name": "Hero",
+  "level": 1,
+  "hp": 100,
+  "maxHp": 100,
+  "attack": 10,
+  "defense": 5,
+  "gold": 0,
+  "inventory": [],
+  "location": "village"
 }
 ```
 
@@ -240,9 +249,9 @@ The project is developed in this order
 
 ## Requirements
 
-* Java JDK 17 or newer
-* A Java IDE or code editor
-* JSON library such as Gson
+- Java JDK 17 or newer
+- A Java IDE or code editor
+- JSON library such as Gson
 
 ## How to Run
 
@@ -260,20 +269,20 @@ java -cp src Main
 
 ## Future Features
 
-* More enemies
-* More items
-* Weapons and armor
-* Skills
-* NPCs
-* Quests
-* Shops
-* Multiple locations
-* Boss battles
-* Dialogue system
-* Multiple save slots
-* Story system
-* More advanced combat
-* add responsive gui
+- More enemies
+- More items
+- Weapons and armor
+- Skills
+- NPCs
+- Quests
+- Shops
+- Multiple locations
+- Boss battles
+- Dialogue system
+- Multiple save slots
+- Story system
+- More advanced combat
+- add responsive gui
 
 ## Goal
 

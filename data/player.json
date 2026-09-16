@@ -1,0 +1,9 @@
+{
+  "name": "TestHero",
+  "maxHealth": 200,
+  "health": 200,
+  "level": 1,
+  "exp": 0,
+  "attack": 25000,
+  "inventory": ["Health Potion", "Rusty Key"]
+}
