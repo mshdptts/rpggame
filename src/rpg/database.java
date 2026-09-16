@@ -5,10 +5,12 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class database {
+	private static final Random random = new Random();
 
 	public static player loadPlayer(String fileName) throws IOException {
 		String json = readFile(fileName);
@@ -42,6 +44,25 @@ public class database {
 					booleanValue(enemyJson, "canHeal")));
 		}
 		return presets;
+	}
+
+	public static enemy chooseRandomEnemy(ArrayList<enemy> enemyPresets) {
+		if (enemyPresets.isEmpty()) {
+			throw new IllegalArgumentException("No enemy presets available");
+		}
+
+		int totalWeight = enemyPresets.size() * (enemyPresets.size() + 1) / 2;
+		int roll = random.nextInt(totalWeight) + 1;
+		int cumulativeWeight = 0;
+
+		for (int index = 0; index < enemyPresets.size(); index++) {
+			cumulativeWeight += index + 1;
+			if (roll <= cumulativeWeight) {
+				return enemyPresets.get(index);
+			}
+		}
+
+		return enemyPresets.get(enemyPresets.size() - 1);
 	}
 
 	public static void savePlayer(String fileName, player playerToSave) throws IOException {

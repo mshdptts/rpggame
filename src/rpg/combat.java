@@ -92,8 +92,9 @@ public class combat {
         try {
             player hero = database.loadPlayer("data/player.json");
             ArrayList<enemy> enemyPresets = database.loadEnemyPresets("data/enemies.json");
+            enemy spawnedEnemy = database.chooseRandomEnemy(enemyPresets);
 
-            battle(hero, enemyPresets.get(0));
+            battle(hero, spawnedEnemy);
             database.savePlayer("data/player-save.json", hero);
 
             System.out.println("\n--- Test complete ---");
