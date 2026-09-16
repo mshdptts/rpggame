@@ -26,4 +26,14 @@ public class enemy extends player {
     public static enemy createImp() {
         return new enemy("Imp", 100, 15, new ArrayList<>(), "Imp", 20);
     }
+
+    public static enemy createMage() {
+        return new enemy("Mage", 100, 50, new ArrayList<>(), "human", 75);
+    }
+
+    public static enemy createCursedCorpse() {
+        return new enemy("Cursed Corpse", 75, 95, new ArrayList<>(), "Cursed Corpse", 50);
+    }
 }
+
+    
