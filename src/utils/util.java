@@ -10,4 +10,17 @@ public class util {
         String input = scanner.nextLine();
         return input;
     }
+
+    public static String slowPrint(String text, int delay) {
+        for (char c : text.toCharArray()) {
+            System.out.print(c);
+            try {
+                Thread.sleep(delay);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+        System.out.println();
+        return text;
+    }
 }
