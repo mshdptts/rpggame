@@ -13,6 +13,22 @@ public class util {
         return input;
     }
 
+    public static void banner(String title) {
+        System.out.println();
+        System.out.println("========================================");
+        System.out.println("              " + title);
+        System.out.println("========================================");
+    }
+
+    public static void section(String title) {
+        System.out.println();
+        System.out.println("--- " + title + " ---");
+    }
+
+    public static void menuOption(String key, String label) {
+        System.out.println("  [" + key + "] " + label);
+    }
+
     public static String slowPrint(String text, int delay) {
         for (char c : text.toCharArray()) {
             System.out.print(c);

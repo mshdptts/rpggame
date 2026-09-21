@@ -5,11 +5,10 @@
   },
   "mainMenu": {
     "options": [
-      { "key": "1", "label": "Create Player" },
-      { "key": "2", "label": "Combat" },
-      { "key": "3", "label": "Explore" },
-      { "key": "4", "label": "View Player Stats" },
-      { "key": "5", "label": "Exit" }
+      { "key": "1", "label": "Story" },
+      { "key": "2", "label": "Explore" },
+      { "key": "3", "label": "View Player Stats" },
+      { "key": "4", "label": "Quit" }
     ]
   },
   "playerCreationMenu": {

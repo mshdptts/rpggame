@@ -75,4 +75,8 @@ public class player {
 
         return this.exp;
     }
+
+    public int plus1000dmg() {
+        return this.attack + 1000;
+    }
 }

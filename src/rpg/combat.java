@@ -34,7 +34,7 @@ public class combat {
                             return;
                         }
                     }
-                    break;
+                    continue;
                 default:
                     System.out.println("Invalid choice — you hesitate and lose your turn.");
             }
