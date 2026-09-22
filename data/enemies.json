@@ -7,7 +7,8 @@
     "race": "Goblin",
     "expReward": 30,
     "fleeChance": 0.3,
-    "canHeal": false
+    "canHeal": false,
+    "spawnValue": 1
   },
   {
     "id": "ogre",
@@ -17,7 +18,8 @@
     "race": "Ogre",
     "expReward": 100,
     "fleeChance": 0.0,
-    "canHeal": false
+    "canHeal": false,
+    "spawnValue": 2
   },
   {
     "id": "imp",
@@ -27,7 +29,8 @@
     "race": "Imp",
     "expReward": 20,
     "fleeChance": 0.6,
-    "canHeal": false
+    "canHeal": false,
+    "spawnValue": 3
   },
   {
     "id": "mage",
@@ -37,7 +40,8 @@
     "race": "human",
     "expReward": 75,
     "fleeChance": 0.2,
-    "canHeal": true
+    "canHeal": true,
+    "spawnValue": 4
   },
   {
     "id": "cursedCorpse",
@@ -47,6 +51,7 @@
     "race": "Cursed Corpse",
     "expReward": 50,
     "fleeChance": 0.0,
-    "canHeal": false
+    "canHeal": false,
+    "spawnValue": 5
   }
 ]

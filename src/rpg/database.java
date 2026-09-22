@@ -41,7 +41,8 @@ public class database {
 					stringValue(enemyJson, "race"),
 					intValue(enemyJson, "expReward"),
 					doubleValue(enemyJson, "fleeChance"),
-					booleanValue(enemyJson, "canHeal")));
+					booleanValue(enemyJson, "canHeal"),
+					intValue(enemyJson, "spawnValue")));
 		}
 		return presets;
 	}

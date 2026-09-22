@@ -135,7 +135,7 @@ public class game {
 
     private enemy copyEnemy(enemy source) {
         return new enemy(source.name, source.maxhealth, source.attack, new ArrayList<>(),
-                source.race, source.expReward, source.fleeChance, source.canHeal);
+                source.race, source.expReward, source.fleeChance, source.canHeal, source.spawnvalue);
     }
 
     private void rewardItem(String itemName) {

@@ -68,7 +68,7 @@ public class player {
         System.out.println(name + " gained " + exp + " experience points.");
 
         while (this.exp >= 100) {
-            level++;
+           this.level = level++;
             this.exp -= 100;
             System.out.println(name + " gained a level!");
         }

@@ -1,6 +1,6 @@
 package rpg;
 
-import java.util.ArrayList;
+
 
 import utils.util;
 
@@ -87,23 +87,5 @@ public class combat {
         p.inventory.remove(itemName);
     }
 
-    // Mini manual test — run this class directly to play a test battle
-    public static void main(String[] args) {
-        try {
-            player hero = database.loadPlayer("data/player.json");
-            ArrayList<enemy> enemyPresets = database.loadEnemyPresets("data/enemies.json");
-            enemy spawnedEnemy = database.chooseRandomEnemy(enemyPresets);
-
-            battle(hero, spawnedEnemy);
-            database.savePlayer("data/player-save.json", hero);
-
-            System.out.println("\n--- Test complete ---");
-            hero.displayStats();
-        } catch (Exception exception) {
-            System.out.println("Could not load game data: " + exception.getMessage());
-        }
-    }
-
-
-    
+   
 }
