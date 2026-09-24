@@ -13,7 +13,7 @@
   {
     "id": "ogre",
     "name": "Ogre",
-    "health": 400,
+    "health": 200,
     "attack": 15,
     "race": "Ogre",
     "expReward": 100,

@@ -34,8 +34,8 @@ public class enemy extends player {
         return "attack";
     }
 
-    // Preset enemy factory methods
-
+    // Preset enemy factory methods (unused, enemy preset already exist in enemies.json)
+/* 
     public static enemy createGoblin() {
         return new enemy("Goblin", 150, 20, new ArrayList<>(), "Goblin", 30, 0.3, false, 1);
     }
@@ -55,4 +55,5 @@ public class enemy extends player {
     public static enemy createCursedCorpse() {
         return new enemy("Cursed Corpse", 75, 95, new ArrayList<>(), "Cursed Corpse", 50, 0.0, false, 5);
     }
+*/
 }
