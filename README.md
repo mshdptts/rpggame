@@ -8,13 +8,13 @@ A simple terminal based RPG game made with Java
 - Enemy system
 - Item system
 - Turn based combat
-- Player leveling
-- Experience and gold
+- Player leveling (no additional features added yet)
+- Experience and gold (to be added)
 - Inventory
 - JSON game data
 - Save and load system
 - Multiple enemies
-- Multiple items
+- Multiple items (to be added)
 - Main game loop
 - Manual JSON save and load
 
