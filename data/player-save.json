@@ -2,9 +2,9 @@
   "name": "ralph",
   "maxHealth": 200,
   "health": 200,
-  "level": 1,
+  "level": 3,
   "exp": 0,
   "attack": 50,
-    "inventory": ["Health Potion", "Rusty Key"
+    "inventory": ["Health Potion", "Rusty Key", "Strange Gem", "Strange Gem"
   ]
 }

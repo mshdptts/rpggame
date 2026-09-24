@@ -12,6 +12,9 @@ public class player {
     int attack;
     ArrayList<String> inventory = new ArrayList<>();
 
+    private static final int HEALTH_PER_LEVEL = 20;
+    private static final int ATTACK_PER_LEVEL = 5;
+
     public player(String name, int health, int level, int exp, int attack, ArrayList<String> inventory) {
         this.name = name;
         this.maxhealth = health;
@@ -68,15 +71,20 @@ public class player {
         System.out.println(name + " gained " + exp + " experience points.");
 
         while (this.exp >= 100) {
-           this.level = level++;
+            this.level++;
             this.exp -= 100;
+            this.maxhealth += HEALTH_PER_LEVEL;
+            this.health += HEALTH_PER_LEVEL;
+            this.attack += ATTACK_PER_LEVEL;
             System.out.println(name + " gained a level!");
+            System.out.println("Stats increased: +" + HEALTH_PER_LEVEL + " max health, +"
+                    + ATTACK_PER_LEVEL + " attack.");
         }
 
         return this.exp;
     }
 
     public int plus1000dmg() {
-        return this.attack + 1000;
+        return this.attack + 100;
     }
 }
