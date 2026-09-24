@@ -125,12 +125,22 @@ public class game {
 
     private enemy createExplorationEnemy(int difficulty) {
         if (difficulty >= 9) {
-            return copyEnemy(database.chooseRandomEnemy(enemyPresets));
+            return createScaledEnemy(database.chooseRandomEnemy(enemyPresets));
         }
 
         int maximumIndex = Math.min(enemyPresets.size() - 1,
                 difficulty <= 3 ? 1 : difficulty <= 6 ? 2 : difficulty <= 8 ? 3 : enemyPresets.size() - 1);
-        return copyEnemy(enemyPresets.get(util.randomInt(0, maximumIndex + 1)));
+        return createScaledEnemy(enemyPresets.get(util.randomInt(0, maximumIndex + 1)));
+    }
+
+    private enemy createScaledEnemy(enemy source) {
+        double levelMultiplier = 1.0 + (player.level - 1) * 0.15;
+        int scaledHealth = (int) Math.round(source.maxhealth * levelMultiplier);
+        int scaledAttack = (int) Math.round(source.attack * levelMultiplier);
+        int scaledExpReward = (int) Math.round(source.expReward * (1.0 + (player.level - 1) * 0.10));
+
+        return new enemy(source.name, scaledHealth, scaledAttack, new ArrayList<>(),
+                source.race, scaledExpReward, source.fleeChance, source.canHeal, source.spawnvalue);
     }
 
     private enemy copyEnemy(enemy source) {
